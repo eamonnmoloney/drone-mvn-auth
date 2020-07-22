@@ -11,7 +11,7 @@ const logError = console.error;
 /* eslint-enable no-console */
 
 const generateServer = server =>
-  `<server><id>${server.id}</id><username>${server.username}</username><password>${server.password}</password></server>`;
+  `<server><id>${server.id}</id><username>${JSON.stringify(server.username)}</username><password>${server.password}</password></server>`;
 
 const generateRepository = type => repo =>
   `<${type}><id>${repo.id}</id><name>${repo.name}</name><url>${repo.url}</url><layout>${repo.layout}</layout></${type}>`;
